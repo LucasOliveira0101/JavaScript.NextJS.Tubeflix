@@ -52,7 +52,7 @@ body {
     border-top: 1px solid var(--border-color);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     font-size: 14px;
     padding: 0 20px;
     height: var(--footer-height);
