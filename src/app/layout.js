@@ -1,6 +1,7 @@
-import Link from "next/link";
+import Link from "next/link"
 import style from './layout.module.css'
-import "./globals.css";
+import "./globals.css"
+import './theme.css'
 
 export const metadata = {
   title: "Tubeflix",
