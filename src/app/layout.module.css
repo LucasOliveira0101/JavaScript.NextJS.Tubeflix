@@ -1,5 +1,4 @@
-.body,
-.body * {
+.body  {
     --header-height: 65px;
     --footer-height: 40px;
     color: var(--text);

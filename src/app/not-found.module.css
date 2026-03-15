@@ -1,10 +1,11 @@
 .notFound {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    position: absolute;
-    bottom: 0;
+    min-height: calc(100vh - (var(--header-height) + var(--footer-height)));
 }
 
 .notFound h2 {
-    margin-bottom: 3em;
+    margin: auto 2vh;
     text-align: center;
 }
