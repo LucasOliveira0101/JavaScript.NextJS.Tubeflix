@@ -2,6 +2,7 @@ import Link from "next/link"
 import style from './layout.module.css'
 import "./globals.css"
 import './theme.css'
+import './fonts.css'
 import ThemeToggle from "@/components/ThemeToggle";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 
@@ -16,7 +17,7 @@ export default function RootLayout({ children }) {
       <html lang="pt-BR">
         <body className={style.body}>
           <header className={style.header}>
-            <h1><Link href="/">Tubeflix</Link></h1>
+            <h1 className="tourney-font"><Link href="/">Tubeflix</Link></h1>
             <nav>
               <Link href="/videos">Vídeos</Link>
               <Link href="/musics">Músicas</Link>
