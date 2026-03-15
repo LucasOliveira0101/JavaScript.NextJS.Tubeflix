@@ -2,12 +2,12 @@
 
 import style from './VideoThumb.module.css'
 import Link from 'next/link'
+import YoutubeVideoThumb from './YoutubeVideoThumb'
 
 export default function VideoThumb({ video }) {
     return (
         video && <Link href={`/player/${video.key}`} className={style.video}>
-            <div className={style.thumbnail}
-                style={{ backgroundImage: `url(https://img.youtube.com/vi/${video.key}/mqdefault.jpg)` }}></div>
+            <YoutubeVideoThumb className={style.thumbnail} youtubeId={video.key} />
         </Link>
     )   
 }

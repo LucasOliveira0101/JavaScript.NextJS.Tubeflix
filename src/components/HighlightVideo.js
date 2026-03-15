@@ -5,6 +5,7 @@ import style from './HighlightVideo.module.css'
 import { getRandomItem, getVideos, objectToArray } from '@/helpers/helpers'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import YoutubeVideoThumb from './YoutubeVideoThumb'
 
 export default function HighlightVideo({ tag }) {
     const router = useRouter()
@@ -27,8 +28,7 @@ export default function HighlightVideo({ tag }) {
     return (
         video && (
             <div className={style.video}>
-                <div className={style.thumbnail}
-                    style={{ backgroundImage: `url(https://img.youtube.com/vi/${video.key}/maxresdefault.jpg), url(https://img.youtube.com/vi/${video.key}/default.jpg)` }}></div>
+                <YoutubeVideoThumb className={style.thumbnail} youtubeId={video.key} />
                 <div className={style.details}>
                     <h2 className={style.title}>{video.title}</h2>
                     <p className={style.description}>{video.description}</p>
