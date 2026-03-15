@@ -1,0 +1,10 @@
+.player {
+    overflow: hidden;
+}
+
+.player iframe {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}

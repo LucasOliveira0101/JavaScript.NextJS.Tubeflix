@@ -16,6 +16,8 @@ body {
     justify-content: space-between;
     height: var(--header-height);
     padding: 0 20px;
+    z-index: 100;
+    position: relative;
 }
 
 .header h1 {
