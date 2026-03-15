@@ -2,21 +2,14 @@
 
 import { useEffect, useState } from 'react'
 import style from './VideoTags.module.css'
-import { objectToArray, removeDuplicates } from '@/helpers/helpers'
+import { getVideos, objectToArray, removeDuplicates } from '@/helpers/helpers'
 
 export default function VideoTags({ tag }) {
     const [ tags, setTags ] = useState([])
 
     useEffect(() => {
         async function fetchVideos() {
-            const response = await fetch('/database.json', {
-                next: {
-                    revalidate: 60
-                }
-            })
-            const videos = await response.json()
-            const videosList = objectToArray(videos)
-                .filter(video => tag == undefined || video.tags.includes(tag))
+            const videosList = await getVideos(tag)
             const tagList = removeDuplicates(videosList
                 .map(video => video.tags)
                 .flat()

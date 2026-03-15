@@ -2,22 +2,15 @@
 
 import { useEffect, useState } from 'react'
 import style from './HighlightVideo.module.css'
-import { getRandomItem, objectToArray } from '@/helpers/helpers'
+import { getRandomItem, getVideos, objectToArray } from '@/helpers/helpers'
 import Link from 'next/link'
 
-export default function HighlightVideo({ tags }) {
+export default function HighlightVideo({ tag }) {
     const [ video, setVideo ] = useState(null)
 
     useEffect(() => {
         async function fetchVideos() {
-            const response = await fetch('/database.json', {
-                next: {
-                    revalidate: 60
-                }
-            })
-            const videos = await response.json()
-            const videosList = objectToArray(videos)
-                .filter(video => tags == undefined || video.tags.includes(tags))
+            const videosList = await getVideos(tag)
             setVideo(getRandomItem(videosList))
         }
         fetchVideos()
