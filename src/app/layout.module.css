@@ -19,6 +19,7 @@ body {
 }
 
 .header h1 {
+    font-family: var(--tourney-font);
     font-size: 36px;
     color: var(--primary);
     text-transform: uppercase;
