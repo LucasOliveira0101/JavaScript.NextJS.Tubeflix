@@ -9,7 +9,14 @@ import { ThemeProvider } from "@/contexts/ThemeContext";
 export const metadata = {
   title: "Tubeflix",
   description: "A melhor seleção de videos do YouTube",
-};
+  openGraph: {
+    title: "Tubeflix",
+    description: "A melhor seleção de videos do YouTube",
+    images: [
+      '/opengraph.webp'
+    ]
+  }
+}
 
 const tourney = localFont({
   src: '../fonts/tourney.woff2',
