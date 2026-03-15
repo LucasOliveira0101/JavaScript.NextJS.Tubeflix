@@ -3,7 +3,8 @@
     --footer-height: 40px;
 }
 
-body {
+body,
+body * {
     color: var(--text);
     background-color: var(--background);
 }
@@ -17,7 +18,6 @@ body {
     height: var(--header-height);
     padding: 0 20px;
     z-index: 100;
-    position: relative;
 }
 
 .header h1 {
@@ -57,4 +57,7 @@ body {
     font-size: 14px;
     padding: 0 20px;
     height: var(--footer-height);
+    z-index: 100%;
+    position: relative;
+
 }

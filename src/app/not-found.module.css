@@ -1,0 +1,10 @@
+.notFound {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.notFound h2 {
+    margin-bottom: 3em;
+    text-align: center;
+}
