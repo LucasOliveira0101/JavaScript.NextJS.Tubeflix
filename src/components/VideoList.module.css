@@ -1,0 +1,15 @@
+.list {
+    display: flex;
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 8px 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-color) var(--background-secondary);
+}
+
+.video {
+    min-width: 320px;
+    min-height: 180px;
+    background: linear-gradient(45deg, blue 0%, red 100%);
+    margin-left: 1em;
+}
