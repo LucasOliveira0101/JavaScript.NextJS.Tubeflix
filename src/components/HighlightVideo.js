@@ -24,7 +24,7 @@ export default function HighlightVideo({ tag }) {
                 <div className={style.details}>
                     <h2 className={style.title}>{video.title}</h2>
                     <p className={style.description}>{video.description}</p>
-                    <Link href='#' className={style.play}>Assistir</Link>
+                    <Link href={`/player/${video.key}`} className={style.play}>Assistir</Link>
                 </div>
             </div>
         )
