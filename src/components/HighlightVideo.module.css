@@ -35,17 +35,27 @@
     color: var(--text-secondary);
 }
 
-.play {
+.play,
+.lucky {
     display: inline-block;
     font-size: 18px;
     background-color: var(--button-bg);
     color: var(--button-text);
     padding: 10px 20px;
     border-radius: 2px;
-    opacity: 0,75;
-    transition: opacity 0,3s;
+    opacity: 0.75;
+    transition: opacity 0.3s;
 }
 
-.play:hover {
+.play {
+    margin-right: 1em;
+}
+
+.lucky {
+    background-color: var(--border-color);
+}
+
+.play:hover
+.lucky:hover {
     opacity: 1;
 }
