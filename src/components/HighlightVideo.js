@@ -18,7 +18,7 @@ export default function HighlightVideo({ tag }) {
             setVideo(getRandomItem(videosList.current))
         }
         fetchVideos()
-    }, [])
+    }, [tag])
 
     function onLuckyClick(event) {
         const video = getRandomItem(videosList.current)

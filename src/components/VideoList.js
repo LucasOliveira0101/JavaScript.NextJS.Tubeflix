@@ -14,7 +14,7 @@ export default function VideoList({ tag }) {
             setVideos(videosList)
         }
         fetchVideos()
-    }, [])
+    }, [tag])
     
     return (
         <div className={style.list}>

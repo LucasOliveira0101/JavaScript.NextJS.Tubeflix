@@ -1,10 +1,7 @@
-:root {
+.body,
+.body * {
     --header-height: 65px;
     --footer-height: 40px;
-}
-
-body,
-body * {
     color: var(--text);
     background-color: var(--background);
 }
